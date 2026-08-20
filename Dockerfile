@@ -25,6 +25,8 @@ WORKDIR /var/www/html
 # Copy project
 COPY . .
 
+COPY ca.pem /etc/ssl/certs/ca.pem
+
 # Install Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
 
